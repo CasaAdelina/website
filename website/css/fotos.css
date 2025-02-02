@@ -161,6 +161,7 @@
         flex-direction: column;
         padding: 20px 10px;
         overflow-y: auto;
+        display: block;
     }
 
     .carousel {
