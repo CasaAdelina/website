@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender - Bungalow Verhuur in Spanje</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/Hompage.css">
+    <link rel="stylesheet" href="../css/Kalender.css">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Casa Adelina</h1>
+        </header>
+        <nav>
+            <a href="HomePage.html">Home</a>
+            <a href="Fotos.html">Foto's</a>
+            <a href="Beschrijving.html">Activiteiten</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="calendar-wrapper">
+        <div id="discountSeasonContainer">
+            <div class="discount-content">
+                <div class="season-info">
+                    <p><strong>Laagseizoen:</strong> €65 per dag</p>
+                    <p><strong>Middenseizoen:</strong> €75 per dag</p>
+                    <p><strong>Hoogseizoen:</strong> €85 per dag</p>
+                    <p><strong>Korting:</strong></p>
+                    <ul>
+                        <li>10% korting vanaf 21 dagen</li>
+                        <li>35% korting op laagseizoen dagen vanaf 30 dagen</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonth">&lt;</button>
+                    <h2 id="currentMonthYear"></h2>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+                <div class="calendar-days">
+                    <!-- Days of the week will be dynamically created -->
+                </div>
+                <div class="calendar-dates">
+                    <!-- Dates will be dynamically generated here -->
+                </div>
+            </div>
+            <div>
+                <div class="dropdown-container">
+                    <label for="numberOfPeople" class="dropdown-label">Aantal Personen:</label>
+                    <select id="numberOfPeople" class="dropdown">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div id="resultContainer"></div>
+            </div>
+            <div id="explenationContainer"></div>
+            <div id="warningMessage" class="warning-message" style="display: none;">
+                <p><strong>Waarschuwing:</strong> De geselecteerde periode bevat geblokkeerde data (19 april tot 26 april). Kies een andere periode.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Bungalow Verhuur Spanje. Alle rechten voorbehouden.</p>
+    </footer>
+    <script type="module" src="../js/Kalender.js"></script>
+</body>
+</html>

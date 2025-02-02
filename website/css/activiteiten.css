@@ -1,0 +1,169 @@
+/* Links Section Styling */
+.links-section {
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(255,192,106,255), rgba(114,77,65,255)), 
+                      url('../images/tropical-resort.jpg'); /* Add your background here */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Ensuring good contrast with the background */
+    padding: 40px 20px;
+}
+
+.links-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    font-family: 'Great Vibes', cursive; /* Font matching the theme */
+}
+
+/* Links Container */
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Individual Link Card */
+.link-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Make the entire link-card clickable */
+.link-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    z-index: 10;
+    position: inherit;
+}
+
+/* Hover effects on the card */
+.link-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Add an inner border on hover for more emphasis */
+.link-card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+}
+
+/* Card Title */
+.link-card a h3 {
+    color: #4CAF50;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+/* Hover effect on the title */
+.link-card a h3:hover {
+    color: #FFD700;
+}
+
+/* Description */
+.link-card a p {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on the description */
+.link-card a:hover p {
+    color: #333;
+}
+
+/* ---- RESPONSIVENESS ---- */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    section{
+        overflow-y: auto;
+    }
+    .links-section {
+        padding: 30px 15px;
+    }
+
+    .links-container {
+        gap: 20px; /* Reduce gap for better spacing */
+    }
+
+    .link-card {
+        width: 260px;
+        padding: 18px;
+    }
+
+    .links-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .link-card a h3 {
+        font-size: 1.5rem;
+    }
+
+    .link-card a p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobiele telefoons (max-width: 600px) */
+@media (max-width: 600px) {
+    section{
+        overflow-y: auto;
+    }
+    .links-section {
+        padding: 20px 10px;
+    }
+
+    .links-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .link-card {
+        width: 100%; /* Full width on small screens */
+        padding: 15px;
+    }
+
+    .links-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .link-card a h3 {
+        font-size: 1.3rem;
+    }
+
+    .link-card a p {
+        font-size: 0.9rem;
+    }
+
+    /* Hover-effect uitgeschakeld op mobiel */
+    .link-card:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}

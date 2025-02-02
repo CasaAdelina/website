@@ -1,0 +1,82 @@
+/* Container for the menu tab */
+.menu-tab {
+    position: fixed;
+    top: 10px; /* Adjusted position for the corner */
+    left: 10px; /* Adjusted position for the corner */
+    z-index: 10;
+}
+
+/* Menu icon styles */
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%; /* Circular icon */
+    padding: 5px;
+}
+
+/* Menu content (hidden by default) */
+.menu-content {
+    position: absolute;
+    top: 50px; /* Positioned right below the icon */
+    left: 0;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    padding: 10px;
+    min-width: 150px;
+    transform-origin: top left; /* Ensures smooth animations from the corner */
+}
+
+/* Menu list */
+.menu-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-content li {
+    margin: 10px 0;
+}
+
+.menu-content a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.menu-content a:hover {
+    color: white;
+}
+
+/* Smooth open animation */
+.menu-content.open {
+    display: flex;
+    animation: fadeInFromTopLeft 0.3s ease-in-out; /* Updated animation */
+}
+
+/* Keyframe animation for smooth opening from top-left */
+@keyframes fadeInFromTopLeft {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translate(-10px, -10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+/* Menu icon styles */
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 4; /* Ensure it's above the menu */
+}

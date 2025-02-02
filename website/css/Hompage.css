@@ -1,0 +1,122 @@
+/* Reset default margin/padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Disable scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the navigation bar */
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    flex: 0 0 auto; /* Fixed height for nav */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content area */
+section {
+    flex: 1 1 auto; /* Flexible space for the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Prevents content from overflowing */
+    flex-direction: column;
+}
+
+/* Ensure the image fits within the section */
+section img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+/* Main content area */
+main {
+    flex: 1 1 auto; /* Main content takes up remaining space */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+main section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    flex: 0 0 auto; /* Footer has a fixed height */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    nav {
+        padding: 10px; /* Reduce nav padding */
+    }
+
+    nav a {
+        font-size: 16px; /* Smaller font size for smaller screens */
+        margin: 0 10px;
+    }
+
+    main {
+        padding-top: 70px; /* Adjust for fixed nav */
+    }
+
+    section {
+        width: 90%;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    main {
+        padding-top: 100px; /* Extra space for stacked nav */
+        padding-bottom: 60px; /* Extra space for footer */
+    }
+
+    section {
+        width: 95%;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,416 @@
+/* Global Styles */
+:root {
+    --primary-color: #f76c6c;
+    --secondary-color: #4a90e2;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: var(--background-color);
+}
+
+/* Calendar Wrapper */
+.calendar-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom, rgba(255,192,106,255), rgba(114,77,65,255)),
+                      url('../images/tropical-resort.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+/* Discount Container */
+#discountSeasonContainer {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* Position the info icon container to the right of the discount container */
+.info-icon-container {
+    position: absolute;
+    top: 15px;
+    right: -50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for the info icon */
+.info-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Styling for the tooltip */
+.info-tooltip {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    width: 200px;
+    text-align: left;
+    z-index: 999;
+}
+
+/* Show the tooltip on hover */
+.info-icon-container:hover .info-tooltip {
+    display: block;
+}
+
+/* Discount Seasons */
+.discount-seasons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    text-align: center;
+}
+
+.season {
+    flex: 1;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 5px;
+}
+
+.season p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Calendar Container */
+.calendar-container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.calendar-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.calendar-header button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.calendar-header button:hover {
+    transform: scale(1.2);
+}
+
+.calendar-days,
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.calendar-days div,
+.calendar-dates div {
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.calendar-days div {
+    font-weight: bold;
+    color: #555;
+}
+
+.calendar-dates div {
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.calendar-dates div:hover {
+    background-color: #70cd74;
+    color: #fff;
+}
+
+.calendar-dates div.today {
+    background-color: #7f6cf7;
+    color: #fff;
+    font-weight: bold;
+}
+
+.calendar-dates div.selected {
+    background-color: #4caf50;
+    color: #fff;
+    font-weight: bold;
+}
+
+.calendar-dates div.in-range {
+    background-color: #a5d6a7;
+    color: #333;
+}
+
+.partial-available {
+    position: relative;
+    background-color: lightgray;
+    color: black;
+    overflow: hidden;
+}
+
+.partial-available::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.5) 50%, transparent 50%);
+    z-index: 1;
+}
+
+.partial-available span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Dropdown Container */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dropdown-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.dropdown {
+    width: 150px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.6);
+}
+
+/* Result Container */
+#resultContainer {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow);
+    visibility: hidden;
+}
+#explenationContainer {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow);
+    max-width: 30%;
+  }
+
+/* Warning Message */
+.warning-message {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border: 3px solid #ff1a1a;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 500px;
+    box-sizing: border-box;
+    z-index: 9999;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+/* Voor tablets (breedte tussen 768px en 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .calendar-wrapper {
+        flex-direction: column;
+        height: auto; /* Zorg dat de hoogte automatisch is */
+        min-height: 100vh; /* Houd een minimale hoogte voor consistentie */
+        overflow-y: auto; /* Sta verticaal scrollen toe */
+        padding-top: 20px;
+    }
+
+    body {
+        overflow-y: auto; /* Zorg dat de pagina scrollbaar is */
+    }
+
+    #discountSeasonContainer {
+        width: 90%;
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .calendar-container {
+        width: 80%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .dropdown-container {
+        align-items: center;
+    }
+
+    #explenationContainer {
+        max-width: 80%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Voor telefoons (breedte tot 768px) */
+@media (max-width: 767px) {
+    .calendar-wrapper {
+        padding: 10px;
+        height: auto; /* Zorg dat de hoogte automatisch is */
+        min-height: 100vh; /* Houd een minimale hoogte voor consistentie */
+        overflow-y: auto; /* Sta verticaal scrollen toe */
+    }
+
+    body {
+        overflow-y: auto; /* Zorg dat de pagina scrollbaar is */
+    }
+
+    #discountSeasonContainer {
+        width: 95%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .calendar-container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0px;
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .calendar-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .calendar-header button {
+        font-size: 1rem;
+    }
+
+    .dropdown-container {
+        width: 100%;
+        align-items: center;
+    }
+
+    .dropdown {
+        width: 80%;
+    }
+
+    #explenationContainer {
+        max-width: 95%;
+        font-size: 0.9rem;
+    }
+
+    .warning-message {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
