@@ -110,20 +110,7 @@
 
 /* Description Box */
 #DescriptionContainer {
-    width: 25%;
-    max-width: 300px;
-    font-size: 1rem;
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: auto; /* Allow scrolling if content overflows */
-    align-self: center;
-    margin-right: 15px;
-    z-index: 9;
+    visibility: collapse;
 }
 
 /* ---- RESPONSIVENESS ---- */
@@ -141,13 +128,6 @@
         width: 70%; /* Make the carousel slightly larger */
         height: 60%;
         margin: 0;
-    }
-
-    #DescriptionContainer {
-        width: 60%;
-        max-width: none;
-        text-align: center;
-        margin: 20px 0; /* Add some spacing */
     }
 
     .controls {
@@ -168,14 +148,6 @@
         width: 90%; /* Full width on small screens */
         height: 60%;
         margin: 0;
-    }
-
-    #DescriptionContainer {
-        width: 90%;
-        max-width: none;
-        font-size: 0.9rem;
-        padding: 10px;
-        margin-top: 15px;
     }
 
     /* Knoppen groter maken voor mobiel */
