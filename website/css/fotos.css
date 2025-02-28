@@ -133,6 +133,9 @@
     .controls {
         width: 90%; /* Ensure controls stay inside the viewport */
     }
+    .control{
+        margin-right: -68px;
+    }
 }
 
 /* Mobiele telefoons (max-width: 600px) */
