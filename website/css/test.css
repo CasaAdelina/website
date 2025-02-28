@@ -49,7 +49,7 @@ h2 {
 /* Smartphones */
 @media (max-width: 600px) {
     h1 {
-        font-size: 3rem; /* More compact */
+        font-size: 2.5rem; /* More compact */
         letter-spacing: 2px;
     }
 

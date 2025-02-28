@@ -412,8 +412,8 @@ const discountInfoHTML = `
             <p>€85/dag</p>
         </div>
     </div>
-    <p>10% korting vanaf 21 dagen</p>
-    <p>vanaf 30 dagen 35% korting op laagseizoen dagen en 10% op de andere dagen</p>
+    <p>10% korting vanaf 15 dagen</p>
+    <p>voor overwinteraars (vanaf 4 weken) word een apart tarief verekend dit enkel in het laagseizoen neem hiervoor contact met ons op</p>
     <div class="info-icon-container">
         <img src="../symbols/info_Icon.png" alt="Info" class="info-icon"/>
             <div class="info-tooltip">
