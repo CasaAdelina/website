@@ -305,15 +305,26 @@ function selectDate(selectedDate, dateDiv) {
 function calculateAmount() {
     if (!selectedStartDate || !selectedEndDate) return;
 
-    const highSeasonOneStart = new Date(selectedStartDate.getFullYear(), 5, 15);
-    const highSeasonOneEnd = new Date(selectedStartDate.getFullYear(), 8, 15);
-    const highSeasonTwoStart = new Date(selectedStartDate.getFullYear(), 11, 24);
-    const highSeasonTwoEnd = new Date(selectedStartDate.getFullYear() + 1, 0, 6);
+    const year = selectedStartDate.getFullYear();
+    const nextYear = year + 1;
 
-    const midSeasonOneStart = new Date(selectedStartDate.getFullYear(), 8, 15);
-    const midSeasonOneEnd = new Date(selectedStartDate.getFullYear(), 9, 30);
-    const midSeasonTwoStart = new Date(selectedStartDate.getFullYear(), 3, 1);
-    const midSeasonTwoEnd = new Date(selectedStartDate.getFullYear(), 4, 14);
+    // Correcte high season datums
+    const highSeasonOneStart = new Date(year, 6, 1); // 1 juli
+    const highSeasonOneEnd = new Date(year, 7, 31); // 31 augustus
+    const highSeasonTwoStart = new Date(year, 11, 24); // 24 december
+    const highSeasonTwoEnd = new Date(nextYear, 0, 7); // 7 januari (volgend jaar)
+
+    // Correcte mid season datums
+    const midSeasonOneStart = new Date(year, 4, 1); // 1 mei
+    const midSeasonOneEnd = new Date(year, 5, 30); // 30 juni
+    const midSeasonTwoStart = new Date(year, 8, 1); // 1 september
+    const midSeasonTwoEnd = new Date(year, 9, 31); // 31 oktober
+
+    // Correcte low season datums
+    const lowSeasonOneStart = new Date(year, 0, 8); // 8 januari
+    const lowSeasonOneEnd = new Date(year, 3, 30); // 30 april
+    const lowSeasonTwoStart = new Date(year, 10, 1); // 1 november
+    const lowSeasonTwoEnd = new Date(year, 11, 23); // 23 december
 
     let totalDays = 0;
     let lowSeasonDays = 0;
@@ -337,7 +348,10 @@ function calculateAmount() {
             (d >= midSeasonTwoStart && d <= midSeasonTwoEnd)
         ) {
             midSeasonDays++;
-        } else {
+        } else if (
+            (d >= lowSeasonOneStart && d <= lowSeasonOneEnd) ||
+            (d >= lowSeasonTwoStart && d <= lowSeasonTwoEnd)
+        ) {
             lowSeasonDays++;
         }
     }
@@ -347,13 +361,8 @@ function calculateAmount() {
     let highSeasonAmount = highSeasonDays * HIGH_SEASON_RATE;
     let totalAmount = lowSeasonAmount + midSeasonAmount + highSeasonAmount;
 
-    if (totalDays > 30) {
-        lowSeasonAmount *= 0.65; // 35% discount on low season days
-        highSeasonAmount *= 0.90;
-        midSeasonAmount *= 0.90;
-        totalAmount = lowSeasonAmount + midSeasonAmount + highSeasonAmount;
-    } else if (totalDays >= 21) {
-        totalAmount *= 0.90; // 10% discount on all days
+    if (totalDays >= 15) {
+        totalAmount *= 0.90; // 10% korting op alles
     }
 
     // Update total amount based on number of people
