@@ -72,3 +72,15 @@ h2 {
         padding: 10px;
     }
 }
+@media (max-height: 530px) {
+    .welcomeText{
+        max-height: 275px;
+        overflow-y: auto;
+    }
+}
+@media (max-height: 380px) {
+    .welcomeText{
+        max-height: 150px;
+        overflow-y: auto;
+    }
+}
