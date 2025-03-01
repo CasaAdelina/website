@@ -312,7 +312,7 @@ function calculateAmount() {
     const highSeasonOneStart = new Date(year, 6, 1); // 1 juli
     const highSeasonOneEnd = new Date(year, 7, 31); // 31 augustus
     const highSeasonTwoStart = new Date(year, 11, 24); // 24 december
-    const highSeasonTwoEnd = new Date(nextYear, 0, 7); // 7 januari (volgend jaar)
+    const highSeasonTwoEnd = new Date(year, 0, 7); // 7 januari (volgend jaar)
 
     // Correcte mid season datums
     const midSeasonOneStart = new Date(year, 4, 1); // 1 mei
@@ -340,7 +340,9 @@ function calculateAmount() {
 
         if (
             (d >= highSeasonOneStart && d <= highSeasonOneEnd) ||
-            (d >= highSeasonTwoStart && d <= highSeasonTwoEnd)
+            (d >= highSeasonTwoStart && d <= highSeasonTwoEnd) || 
+            (d.getMonth() === 11 && d.getDate()>= 24)||
+            (d.getMonth() === 0 && d.getDate() <= 7)    
         ) {
             highSeasonDays++;
         } else if (
