@@ -149,8 +149,11 @@
 
     .carousel {
         width: 90%; /* Full width on small screens */
-        height: 70%;
+        height: 90%;
         margin: 0;
+    }
+    .carousel img.active {
+        height: 75%;
     }
 
     /* Knoppen groter maken voor mobiel */
