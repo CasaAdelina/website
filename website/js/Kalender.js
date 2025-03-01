@@ -419,15 +419,15 @@ const discountInfoHTML = `
             <div class="info-tooltip">
                 <div class="season">
                     <p><strong>Laagseizoen:</strong></p>
-                    <p>jan,feb,mar, nov, dec</p>
+                    <p>vanaf 8 jan,feb,mar,apr,nov, tot 23 dec</p>
                 </div>
                 <div class="season">
                     <p><strong>Middenseizoen:</strong></p>
-                    <p>apr,mei, tot 15 jun, vanaf 15 sept, okt</p>
+                    <p>mei, jun, sept, okt</p>
                 </div>
                 <div class="season">
                     <p><strong>Hoogseizoen:</strong></p>
-                    <p>van 15 jun tot 15 sept en van 24 dec tot 7 jan</p>
+                    <p>jul, aug, vanaf 24dec tot en met 7 jan</p>
                 </div>
             </div>
     </div>
