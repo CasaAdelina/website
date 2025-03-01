@@ -98,7 +98,11 @@
 }
 
 /* ---- RESPONSIVENESS ---- */
-
+@media (max-width: 1080px){
+    section{
+        padding-top: 50px;
+    }
+}
 /* Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
     section{
@@ -134,7 +138,7 @@
 /* Mobiele telefoons (max-width: 600px) */
 @media (max-width: 600px) {
     section{
-        padding-top: 130px;
+        padding-top: 180px;
     }
 
     .links-container {
@@ -168,6 +172,6 @@
 }
 @media (max-width: 400px) {
     section {
-      padding-top: 155px;
+      padding-top: 195px;
     }
 }

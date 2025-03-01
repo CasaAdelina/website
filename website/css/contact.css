@@ -85,7 +85,7 @@ p{
 /* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
     main{
-        overflow-y: auto;
+        padding-top: 40px;
     }
     .contact-card {
         width: 80%;
@@ -113,9 +113,6 @@ p{
 
 /* Mobiele telefoons (max-width: 600px) */
 @media (max-width: 600px) {
-    main{
-        overflow-y: auto;
-    }
     .contact-card {
         width: 100%;
         padding: 10px;
