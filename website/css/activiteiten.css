@@ -134,7 +134,11 @@
         font-size: 0.95rem;
     }
 }
-
+@media (max-width: 680px) {
+    section{
+        padding-top: 230px;
+    }
+}
 /* Mobiele telefoons (max-width: 600px) */
 @media (max-width: 600px) {
     section{
