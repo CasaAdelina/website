@@ -126,7 +126,7 @@
 
     .carousel {
         width: 70%; /* Make the carousel slightly larger */
-        height: 60%;
+        height: 85%;
         margin: 0;
     }
 
@@ -149,7 +149,7 @@
 
     .carousel {
         width: 90%; /* Full width on small screens */
-        height: 60%;
+        height: 70%;
         margin: 0;
     }
 
