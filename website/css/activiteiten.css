@@ -102,14 +102,15 @@
 /* Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
     section{
-        overflow-y: auto;
+        padding-top: 160px;
     }
     .links-section {
-        padding: 30px 15px;
+        width: 100%;
     }
 
     .links-container {
         gap: 20px; /* Reduce gap for better spacing */
+        width: 90%;
     }
 
     .link-card {
@@ -133,10 +134,7 @@
 /* Mobiele telefoons (max-width: 600px) */
 @media (max-width: 600px) {
     section{
-        overflow-y: auto;
-    }
-    .links-section {
-        padding: 20px 10px;
+        padding-top: 130px;
     }
 
     .links-container {
@@ -166,5 +164,10 @@
     .link-card:hover {
         transform: none;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+@media (max-width: 400px) {
+    section {
+      padding-top: 155px;
     }
 }
