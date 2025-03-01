@@ -168,11 +168,7 @@
         background: rgba(0, 0, 0, 0.5);
     }
 }
-@media (max-height: 360px) {
-    
-    header h1 {
-        font-size: 2rem;
-    }
+@media (max-height: 380px) {
     footer{
         visibility: collapse;
     }

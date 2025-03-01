@@ -130,7 +130,7 @@ header:hover {
         transform: none;
     }
 }
-@media (max-height: 360px) {
+@media (max-height: 380px) {
     header {
         padding: 20px 15px;
     }
