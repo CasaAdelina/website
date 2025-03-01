@@ -184,3 +184,8 @@
       padding-top: 250px;
     }
 }
+@media (max-height: 320px) {
+    section{
+        padding-top: 350px;
+    }
+}
