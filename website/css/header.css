@@ -130,3 +130,11 @@ header:hover {
         transform: none;
     }
 }
+@media (max-height: 360px) {
+    header {
+        padding: 20px 15px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}
