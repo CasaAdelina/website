@@ -177,7 +177,7 @@ function renderCalendar() {
                 // Fully blocked dates
                 dateDiv.style.opacity = "0.5";
                 dateDiv.style.pointerEvents = "none";
-                dateDiv.style.backgroundColor = "red";
+                dateDiv.style.backgroundColor = "#ff0000";
                 dateDiv.style.color = "white";
             }
         } else {

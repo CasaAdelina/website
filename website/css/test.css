@@ -74,6 +74,8 @@ h2 {
     .welcomeText{
         width: 325px;
         margin-right: 19px;
+        overflow-y: auto;
+        height: 400px;
     }
 }
 @media (max-height: 530px) {
