@@ -74,7 +74,7 @@ h2 {
 }
 @media (max-height: 530px) {
     .welcomeText{
-        max-height: 275px;
+        max-height: 300px;
         overflow-y: auto;
     }
 }
