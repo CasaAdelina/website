@@ -14,7 +14,7 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
     margin-top: 0px;
-    font-family: 'Great Vibes', cursive; /* Font matching the theme */
+    /*font-family: 'Great Vibes', cursive; /* Font matching the theme */
 }
 
 /* Links Container */
@@ -176,6 +176,11 @@
 }
 @media (max-width: 400px) {
     section {
-      padding-top: 195px;
+      padding-top: 250px;
+    }
+}
+@media (max-width: 320px) {
+    section {
+      padding-top: 250px;
     }
 }
