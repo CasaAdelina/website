@@ -1,12 +1,13 @@
 /* Links Section Styling */
 .links-section {
-    text-align: center;
     background-image: linear-gradient(to bottom, rgba(255,192,106,255), rgba(114,77,65,255)), 
                       url('../images/tropical-resort.jpg'); /* Add your background here */
     background-size: cover;
     background-position: center;
     color: #fff; /* Ensuring good contrast with the background */
-    padding: 40px 20px;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 150px;
 }
 
 .links-section h2 {
@@ -145,8 +146,9 @@
     }
 
     .link-card {
-        width: 100%; /* Full width on small screens */
+        width: 93%; /* Full width on small screens */
         padding: 15px;
+        margin: 15px;
     }
 
     .links-section h2 {
