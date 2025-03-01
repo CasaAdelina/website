@@ -29,6 +29,7 @@
     height: 80%;
     perspective: 1000px; /* Enables 3D effect */
     margin: auto;
+    overflow: hidden;
     z-index: 9;
 }
 
