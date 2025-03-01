@@ -308,6 +308,16 @@ body {
         transform: translate(-50%, -50%);
     }
 }
+@media (max-width: 1370px) {
+    .info-icon-container {
+        top: 85px;
+        left: 15px;
+    }
+    .info-tooltip {
+        left: 30px;
+    }
+}
+
 /* Voor tablets (breedte tussen 768px en 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .calendar-wrapper {
