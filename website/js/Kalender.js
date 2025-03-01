@@ -439,4 +439,10 @@ discountSeasonContainer.innerHTML = discountInfoHTML;
 const explenationContainer = document.getElementById("explenationContainer");
 explenationContainer.innerHTML = `
                                     <p><strong>Selecteer hier een datum om een prijs te bekomen:</strong> Kies een start- en einddatum uit de kalender hieronder om de prijs te berekenen voor de geselecteerde periode.</p>
+                                    <br>
+                                    <p><strong>Inchecken vanaf 15u en uitchecken om 11u</strong></p>
+                                    <br>
+                                    <p><strong>elektriciteit tot 15KW/dag hierna zal een extra kost aangerekend worden van 1€ per KW deze word afgetrokken van de waarborg.</strong></p>
+                                    <br>
+                                    <p><strong>huisdieren in overleg.</strong></p>
                                 `;
