@@ -146,9 +146,8 @@
     }
 
     .link-card {
-        width: 93%; /* Full width on small screens */
+        width: 90%; /* Full width on small screens */
         padding: 15px;
-        margin: 15px;
     }
 
     .links-section h2 {
