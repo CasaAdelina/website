@@ -71,6 +71,10 @@ h2 {
     .title {
         padding: 10px;
     }
+    .welcomeText{
+        width: 325px;
+        margin-right: 19px;
+    }
 }
 @media (max-height: 530px) {
     .welcomeText{

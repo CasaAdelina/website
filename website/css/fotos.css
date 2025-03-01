@@ -150,7 +150,7 @@
     .carousel {
         width: 90%; /* Full width on small screens */
         height: 90%;
-        margin: 0;
+        margin: 15px;
     }
     .carousel img.active {
         height: 75%;
