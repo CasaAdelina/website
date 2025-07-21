@@ -381,7 +381,7 @@ function calculateAmount() {
                                 <p><strong>Hier komt nog een waarborg bij van:</strong> €300</p>
                                 <p><strong>Eind schoonmaak:</strong> €70</p>
                                 <p><strong>Bed en bad linnen:</strong> €7,5 per persoon</p>
-                                <p class="highlight">Prijs = €${(totalAmount + 300 + 70 + (7.5 * numberOfPeople)).toFixed(2)}</p>
+                                <p class="highlight">Prijs = €${(totalAmount + 300 + 125).toFixed(2)}</p>
                                 `;
 }
 
