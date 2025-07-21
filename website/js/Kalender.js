@@ -379,8 +379,7 @@ function calculateAmount() {
                                 <p><strong>Geselecteerde periode:</strong> ${selectedStartDate.toLocaleDateString()} tot ${selectedEndDate.toLocaleDateString()} (${totalDays} dagen).</p>
                                 <p><strong>Totaal bedrag:</strong> €${totalAmount.toFixed(2)}</p>
                                 <p><strong>Hier komt nog een waarborg bij van:</strong> €300</p>
-                                <p><strong>Eind schoonmaak:</strong> €70</p>
-                                <p><strong>Bed en bad linnen:</strong> €7,5 per persoon</p>
+                                <p><strong>Eind schoonmaak:</strong> €125</p>
                                 <p class="highlight">Prijs = €${(totalAmount + 300 + 125).toFixed(2)}</p>
                                 `;
 }
